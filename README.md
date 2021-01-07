@@ -13,6 +13,7 @@
 ### Why Redux?
 
 * redux == this.state
+* container들을 이어준다
 * 상태 관리
 * Good for managing large state
 * Useful for sharing data between containers
