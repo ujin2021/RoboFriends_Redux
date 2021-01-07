@@ -27,7 +27,8 @@
 
 ### Step
 
-1. Action(user click button, drop down menu)
+1. Action(user click button, drop down menu) <br>
+(middleware)
 2. Reducer(함수)
 3. Store(reducer를 거쳐 store의 상태가 변화)
 4. Make changes
@@ -35,3 +36,17 @@
 ### Flux Pattern
 
 <p> Action -> Dispatcher -> Store -> View </p>
+
+### debugger
+
+* $ npm install redux-logger
+* middleware에 해당하는 것
+
+``` js
+// index.js
+import { createStore, applyMiddleware } from 'redux' // applyMiddleware 추가
+import { createLogger } from 'redux-logger'
+
+const logger = createLogger()
+const store = createStore(searchRobots, applyMiddleware(logger)) // applyMiddleware(사용할 middleware)
+```

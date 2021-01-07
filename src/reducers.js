@@ -7,7 +7,7 @@ const initialState = {
 // action은 object다(actions.js에서 object로)
 // reducers 는 pure function
 export const searchRobots = (state=initialState, action={}) => {
-    console.log('reducers', action.type) // CHANGE_SEARCH_FIELD
+    // console.log('reducers', action.type) // CHANGE_SEARCH_FIELD
     switch(action.type) {
         case CHANGE_SEARCH_FIELD :
             return { ...state, searchField: action.payload} //spread operator
