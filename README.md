@@ -50,3 +50,10 @@ import { createLogger } from 'redux-logger'
 const logger = createLogger()
 const store = createStore(searchRobots, applyMiddleware(logger)) // applyMiddleware(사용할 middleware)
 ```
+
+### redux-thunk
+
+* $ npm install redux-thunk
+* middleware
+* AJAX 호출과 같은 비동기 작업을 처리할 수 있음
+* 해당 프로젝트에서 robots api 를 fetch 할 때 사용
