@@ -9,13 +9,13 @@ import { setSearchField } from '../actions'
 
 const mapStateToProps = state => {
   return {
-    searchField: state.searchField // 어떤것을 listening 할 지
+    searchField: state.searchField // 여러 reducer존재시 state.searchRobots.searchField
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onSearchChange: (event) => dispatch(setSearchField(event.target.value))
+    onSearchChange: (event) => dispatch(setSearchField(event.target.value)) // 입력시에 setsearchField에 입력한 value를 알려준다
   }
 }
 
